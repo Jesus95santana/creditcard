@@ -41,6 +41,10 @@ A simple MagicMirror² module that displays one or more horizontal progress bars
    git clone https://github.com/you/module-creditcard.git creditcard
    ```
 
+   ```
+   npm install node-fetch@2
+   ```
+
 2. Configuration
    If you would like to add data dynamically from an enpoint you will need to add it in the config.json\
    Json from endpoint will need to be formatted as such

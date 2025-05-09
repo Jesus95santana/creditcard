@@ -26,7 +26,8 @@
 /* Second line: label | bar | percent */
 .cc-details {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
   gap: 0.5rem;
   width: 100%;
 }
@@ -36,23 +37,121 @@
   min-width: 3rem;
 }
 
+.cc-label2 {
+  font-size: 10px;
+}
+
 .cc-bar {
-  flex: 1;
-  min-width: 150px;
-  background: #eee;
-  border-radius: 0.25rem;
+  position: relative;
+  width: 100%;
+  min-width: 170px;
+  height: 1.5rem;
+  /* background: rgba(255, 255, 255, 0.25); */
+  background: rgba(0, 0, 0, 0.245);
+  /* Soft white overlay */
+  border-radius: 0.75rem;
   overflow: hidden;
-  height: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  /* Adds blur to what's behind */
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .cc-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
-  background: #3b82f6;
-  transition: width 0.5s ease;
+  transition: width 0.4s ease-in-out;
+  border-radius: 0.75rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.cc-fill-2 {
+  background: linear-gradient(90deg, #f63b95, #f41344);
 }
 
 .cc-percent {
   min-width: 2.5rem;
   text-align: right;
   font-variant-numeric: tabular-nums;
+  font-size: 12px;
+  font-weight: 900;
 }
+
+.cc-max {
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  left: 40px;
+}
+
+.cc-bar {
+  position: relative;
+  width: 100%;
+  height: 1.5rem;
+  /* background: rgba(255, 255, 255, 0.25); */
+  background: rgba(0, 0, 0, 0.245);
+  /* Soft white overlay */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  /* Adds blur to what's behind */
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.cc-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 0.4s ease-in-out;
+  border-radius: 0.75rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #3b82f6, #2563eb);
+}
+
+.cc-fill-2 {
+  background: linear-gradient(90deg, #f63b95, #f41344);
+}
+
+.cc-max1 {
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  right: 10px;
+}
+
+.cc-bar1 {
+  position: relative;
+  align-self: flex-end;
+  width: 60%;
+  height: 1.5rem;
+  /* background: rgba(255, 255, 255, 0.25); */
+  background: rgba(0, 0, 0, 0.245);
+  /* Soft white overlay */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  /* Adds blur to what's behind */
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.cc-fill1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  height: 100%;
+  transition: width 0.4s ease-in-out;
+  border-radius: 0.75rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #3bf692, #39eb25);
+}
+
+/* .cc-fill1-2 {
+  background: linear-gradient(90deg, #f63b95, #f41344);
+} */
